@@ -19,4 +19,11 @@ class CommonUtil: NSObject
     {
         CommonUtil.appDelegate().setNetworkActivityIndicatorVisible(shouldShow)
     }
+    
+    class func showAlert(alertTitle:String, alertContent:String, fromViewController:UIViewController, actionTitle:String)
+    {
+        let alert = UIAlertController(title: alertTitle, message: alertContent, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: actionTitle, style: UIAlertActionStyle.Default, handler: nil))
+        fromViewController.presentViewController(alert, animated: true, completion: nil)
+    }
 }

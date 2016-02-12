@@ -14,6 +14,13 @@
 		3517CDA01C6DE4AC0077D49E /* SaltSideAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3517CD9F1C6DE4AC0077D49E /* SaltSideAssignmentUITests.swift */; };
 		3517CDAF1C6DE9260077D49E /* SaltListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3517CDAE1C6DE9260077D49E /* SaltListVC.swift */; };
 		3517CDB21C6DEA550077D49E /* CommonUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3517CDB11C6DEA550077D49E /* CommonUtil.swift */; };
+		3517CDB41C6E10270077D49E /* CommunicationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3517CDB31C6E10270077D49E /* CommunicationUtil.swift */; };
+		3517CDB71C6E6E940077D49E /* SaltListingCustomTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3517CDB61C6E6E940077D49E /* SaltListingCustomTVCell.swift */; };
+		3517CDBA1C6E74BA0077D49E /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3517CDB91C6E74BA0077D49E /* ListModel.swift */; };
+		3517CDBC1C6E76B30077D49E /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3517CDBB1C6E76B30077D49E /* Reachability.swift */; };
+		3517CDBE1C6E7A2F0077D49E /* DataDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3517CDBD1C6E7A2F0077D49E /* DataDownloader.swift */; };
+		3517CDC11C6E7B790077D49E /* ListParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3517CDC01C6E7B790077D49E /* ListParser.swift */; };
+		3517CDC31C6E8DC90077D49E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3517CDC21C6E8DC90077D49E /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +54,13 @@
 		3517CDA11C6DE4AC0077D49E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3517CDAE1C6DE9260077D49E /* SaltListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaltListVC.swift; sourceTree = "<group>"; };
 		3517CDB11C6DEA550077D49E /* CommonUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonUtil.swift; sourceTree = "<group>"; };
+		3517CDB31C6E10270077D49E /* CommunicationUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunicationUtil.swift; sourceTree = "<group>"; };
+		3517CDB61C6E6E940077D49E /* SaltListingCustomTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaltListingCustomTVCell.swift; sourceTree = "<group>"; };
+		3517CDB91C6E74BA0077D49E /* ListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
+		3517CDBB1C6E76B30077D49E /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		3517CDBD1C6E7A2F0077D49E /* DataDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataDownloader.swift; sourceTree = "<group>"; };
+		3517CDC01C6E7B790077D49E /* ListParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListParser.swift; sourceTree = "<group>"; };
+		3517CDC21C6E8DC90077D49E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3517CDC31C6E8DC90077D49E /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,7 @@
 				3517CD931C6DE4AC0077D49E /* SaltSideAssignmentTests */,
 				3517CD9E1C6DE4AC0077D49E /* SaltSideAssignmentUITests */,
 				3517CD7D1C6DE4AC0077D49E /* Products */,
+				3517CDC21C6E8DC90077D49E /* QuartzCore.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +113,9 @@
 		3517CD7E1C6DE4AC0077D49E /* SaltSideAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				3517CDBF1C6E7B6A0077D49E /* Parsers */,
+				3517CDB81C6E74A40077D49E /* ModelClasses */,
+				3517CDB51C6E6E540077D49E /* CustomUITableViewCells */,
 				3517CDB01C6DEA450077D49E /* UtilClasses */,
 				3517CDAD1C6DE8E20077D49E /* ViewControllers */,
 				3517CD7F1C6DE4AC0077D49E /* AppDelegate.swift */,
@@ -136,9 +155,36 @@
 		3517CDB01C6DEA450077D49E /* UtilClasses */ = {
 			isa = PBXGroup;
 			children = (
+				3517CDBB1C6E76B30077D49E /* Reachability.swift */,
 				3517CDB11C6DEA550077D49E /* CommonUtil.swift */,
+				3517CDB31C6E10270077D49E /* CommunicationUtil.swift */,
+				3517CDBD1C6E7A2F0077D49E /* DataDownloader.swift */,
 			);
 			path = UtilClasses;
+			sourceTree = "<group>";
+		};
+		3517CDB51C6E6E540077D49E /* CustomUITableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				3517CDB61C6E6E940077D49E /* SaltListingCustomTVCell.swift */,
+			);
+			path = CustomUITableViewCells;
+			sourceTree = "<group>";
+		};
+		3517CDB81C6E74A40077D49E /* ModelClasses */ = {
+			isa = PBXGroup;
+			children = (
+				3517CDB91C6E74BA0077D49E /* ListModel.swift */,
+			);
+			path = ModelClasses;
+			sourceTree = "<group>";
+		};
+		3517CDBF1C6E7B6A0077D49E /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				3517CDC01C6E7B790077D49E /* ListParser.swift */,
+			);
+			path = Parsers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,8 +316,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3517CDC11C6E7B790077D49E /* ListParser.swift in Sources */,
+				3517CDBE1C6E7A2F0077D49E /* DataDownloader.swift in Sources */,
+				3517CDBC1C6E76B30077D49E /* Reachability.swift in Sources */,
 				3517CDAF1C6DE9260077D49E /* SaltListVC.swift in Sources */,
 				3517CD801C6DE4AC0077D49E /* AppDelegate.swift in Sources */,
+				3517CDB41C6E10270077D49E /* CommunicationUtil.swift in Sources */,
+				3517CDBA1C6E74BA0077D49E /* ListModel.swift in Sources */,
+				3517CDB71C6E6E940077D49E /* SaltListingCustomTVCell.swift in Sources */,
 				3517CDB21C6DEA550077D49E /* CommonUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
