@@ -29,14 +29,6 @@ class SaltListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.getTableViewData()
     }
     
-    override func viewWillAppear(animated: Bool) {
-        //self.titleImgView.hidden = false
-    }
-    
-    override func viewWillDisappear(animated: Bool) {
-        //self.titleImgView.hidden = true
-    }
-    
     //MARK : -
     //MARK : NavigationBar configuration method
     func configureNavBar()
