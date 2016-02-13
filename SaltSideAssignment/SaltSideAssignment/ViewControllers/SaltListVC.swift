@@ -212,6 +212,8 @@ class SaltListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         saltDetailsVC.detailsDict = self.listArr[indexPath.row]
         
         self.navigationController?.pushViewController(saltDetailsVC, animated: true)
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat

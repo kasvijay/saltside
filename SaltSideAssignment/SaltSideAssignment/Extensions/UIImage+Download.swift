@@ -31,6 +31,7 @@ extension UIImageView
         }
         else if let url = NSURL(string: link!)
         {
+            CommonUtil.setNetworkActivityIndicator(true)
             let fileManager = NSFileManager.defaultManager()
             let cacheDirPath = NSSearchPathForDirectoriesInDomains(.CachesDirectory, .UserDomainMask, true)[0] as String
             let imgDirPath = cacheDirPath.stringByAppendingString("/images/")
@@ -47,6 +48,7 @@ extension UIImageView
             print("Image Path : \(imagePath)")
             
             NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (imgData, _, error) -> Void in
+                CommonUtil.setNetworkActivityIndicator(false)
                 guard let data = imgData where error == nil else {
                     print("\nerror on download \(error)")
                     return
