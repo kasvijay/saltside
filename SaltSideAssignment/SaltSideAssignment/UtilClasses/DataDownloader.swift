@@ -12,7 +12,7 @@ class DataDownloader: NSObject {
 
     class func getListing(processSuccess: ([ListModel]) -> Void, processFailure: () -> Void) -> Void
     {
-        let url = NSURL(string: "https://gist.githubusercontent.com/maclir/f715d78b49c3b4b3b77f/raw/8854ab2fe4cbe2a5919cea97d71b714ae5a4838d/items.json")
+        let url = NSURL(string: Constants.URLConstants.listingURL)
         
         let urlRequest = NSURLRequest(URL: url!)
         
@@ -27,7 +27,7 @@ class DataDownloader: NSObject {
                     processSuccess(ListParser.parseJsonDict(jsonDict))
                 }
                 catch {
-                    print("error serializing JSON: \(error)")
+                    print("Error in serializing JSON: \(error)")
                 }
             }
             else

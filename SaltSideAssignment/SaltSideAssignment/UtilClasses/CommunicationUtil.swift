@@ -15,11 +15,15 @@ class CommunicationUtil: NSObject, NSURLSessionDataDelegate {
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
             
-            let str = String(data: data!, encoding: NSUTF8StringEncoding)
-            print(str)
             if (error == nil)
             {
+                let str = String(data: data!, encoding: NSUTF8StringEncoding)
+                print(str)
                 completionHandler(true, response, data, error)
+            }
+            else
+            {
+                completionHandler(false, response, data, error)
             }
             
         }

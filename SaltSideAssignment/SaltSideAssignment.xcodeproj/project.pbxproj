@@ -24,6 +24,7 @@
 		3517CDC61C6EFC120077D49E /* UIImage+Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3517CDC51C6EFC120077D49E /* UIImage+Download.swift */; };
 		3517CDC81C6EFCB10077D49E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3517CDC71C6EFCB10077D49E /* Constants.swift */; };
 		3517CDCA1C6EFCCA0077D49E /* NSCache+SharedInstanse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3517CDC91C6EFCCA0077D49E /* NSCache+SharedInstanse.swift */; };
+		3517CDCC1C6F2FCB0077D49E /* SaltDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3517CDCB1C6F2FCB0077D49E /* SaltDetailsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		3517CDC51C6EFC120077D49E /* UIImage+Download.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Download.swift"; sourceTree = "<group>"; };
 		3517CDC71C6EFCB10077D49E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3517CDC91C6EFCCA0077D49E /* NSCache+SharedInstanse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSCache+SharedInstanse.swift"; sourceTree = "<group>"; };
+		3517CDCB1C6F2FCB0077D49E /* SaltDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaltDetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				3517CDAE1C6DE9260077D49E /* SaltListVC.swift */,
+				3517CDCB1C6F2FCB0077D49E /* SaltDetailsVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3517CDC11C6E7B790077D49E /* ListParser.swift in Sources */,
+				3517CDCC1C6F2FCB0077D49E /* SaltDetailsVC.swift in Sources */,
 				3517CDC81C6EFCB10077D49E /* Constants.swift in Sources */,
 				3517CDBE1C6E7A2F0077D49E /* DataDownloader.swift in Sources */,
 				3517CDCA1C6EFCCA0077D49E /* NSCache+SharedInstanse.swift in Sources */,

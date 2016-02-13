@@ -20,13 +20,12 @@ extension UIImageView
         }
         if (NSCache.sharedInstance.objectForKey(imgId) != nil)
         {
-            print("Image from Cache")
-            self.image = UIImage(data: NSCache.sharedInstance.objectForKey(imgId) as! NSData)
+            self.image = CommonUtil.resizeImage(UIImage(data: NSCache.sharedInstance.objectForKey(imgId) as! NSData)!, newWidth: (Constants.DimentionConstants.kDeviceWidth - 40))
             self.layoutSubviews()
         }
         else if (NSFileManager.defaultManager().fileExistsAtPath(self.getLocalImagePathForId(imgId)))
         {
-            self.image = UIImage(contentsOfFile: self.getLocalImagePathForId(imgId))
+            self.image = CommonUtil.resizeImage(UIImage(contentsOfFile: self.getLocalImagePathForId(imgId))!, newWidth: (Constants.DimentionConstants.kDeviceWidth - 40))
             NSCache.sharedInstance.setObject(NSData(contentsOfFile: self.getLocalImagePathForId(imgId))!, forKey: imgId)
             self.layoutSubviews()
         }
@@ -60,7 +59,7 @@ extension UIImageView
                         UIImageJPEGRepresentation(getImage, 100)!.writeToFile(imagePath, atomically: true)
                         NSCache.sharedInstance.setObject(data, forKey: imgId)
                         
-                        self.image = getImage
+                        self.image = CommonUtil.resizeImage(getImage, newWidth: (Constants.DimentionConstants.kDeviceWidth - 40))
                         self.layoutSubviews()
                     }
                 }

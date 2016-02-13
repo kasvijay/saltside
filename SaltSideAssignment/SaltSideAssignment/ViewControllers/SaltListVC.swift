@@ -30,11 +30,11 @@ class SaltListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     override func viewWillAppear(animated: Bool) {
-        self.titleImgView.hidden = false
+        //self.titleImgView.hidden = false
     }
     
     override func viewWillDisappear(animated: Bool) {
-        self.titleImgView.hidden = true
+        //self.titleImgView.hidden = true
     }
     
     //MARK : -
@@ -170,13 +170,13 @@ class SaltListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         CommonUtil.setNetworkActivityIndicator(false)
         dispatch_async(dispatch_get_main_queue()) { () -> Void in
             self.loadingView.hidden = true
+            CommonUtil.showAlert("Alert!", alertContent: "Error while downloading data", fromViewController: self, actionTitle: "Ok")
         }
-        CommonUtil.showAlert("Alert!", alertContent: "Error while downloading data", fromViewController: self, actionTitle: "Ok")
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     
@@ -212,6 +212,14 @@ class SaltListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         cell.descriptionLbl.text = description
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        let saltDetailsVC = SaltDetailsVC()
+        saltDetailsVC.detailsDict = self.listArr[indexPath.row]
+        
+        self.navigationController?.pushViewController(saltDetailsVC, animated: true)
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
